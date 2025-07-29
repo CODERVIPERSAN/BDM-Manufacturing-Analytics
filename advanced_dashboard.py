@@ -38,6 +38,23 @@ st.markdown("""
         padding: 1rem;
         margin: 1rem 0;
         border-radius: 5px;
+        color: #333333;
+    }
+    .insight-box h4 {
+        color: #2c3e50;
+        margin-bottom: 1rem;
+    }
+    .insight-box h5 {
+        color: #34495e;
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+    }
+    .insight-box strong {
+        color: #2c3e50;
+    }
+    .insight-box ul li {
+        color: #495057;
+        margin-bottom: 0.5rem;
     }
     .stTabs [data-baseweb="tab-list"] {
         gap: 2px;
@@ -170,9 +187,20 @@ with tab2:
         x=[str(col) for col in pivot_data.columns],
         y=pivot_data.index,
         title="Production Heatmap (Customer vs Date)",
-        color_continuous_scale='Blues'
+        color_continuous_scale='RdYlBu_r',
+        aspect='auto'
     )
-    fig_heatmap.update_layout(height=400)
+    fig_heatmap.update_layout(
+        height=400,
+        xaxis={'side': 'bottom'},
+        coloraxis_colorbar=dict(
+            title="Production Quantity",
+            tickmode="linear",
+            tick0=0,
+            dtick=pivot_data.values.max()/5
+        )
+    )
+    fig_heatmap.update_xaxes(tickangle=45)
     st.plotly_chart(fig_heatmap, use_container_width=True)
 
 with tab3:
