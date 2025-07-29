@@ -252,17 +252,49 @@ with tab4:
 with tab5:
     st.subheader("Detailed Business Insights")
     
+    # Results and Findings Section
+    st.markdown("""
+    <div class="insight-box">
+    <h4>📊 Results and Findings</h4>
+    
+    <h5>Graphs and Pictorial Representation:</h5>
+    <strong>Sales Distribution by Party:</strong><br>
+    • Observation: 70% of sales come from the top 4 parties.<br>
+    • Trend: Heavy reliance on a few key customers.<br><br>
+    
+    <strong>Production Volume Fluctuations:</strong><br>
+    • Observation: Significant fluctuations in daily production volumes.<br>
+    • Pattern: Indicates variability in demand and production processes.<br><br>
+    
+    <strong>Quadrant Analysis:</strong><br>
+    • High Volume, High Sales: BOTTOM SUCTION DUCT, ROLLER UNDER DUCT<br>
+    • High Volume, Low Sales: SUCTION VALVE, CLOSING COVER COMPL<br>
+    • Low Volume, High Sales: BOTTOM CAN PLATE COM, SUCTION DOOR 2 COMPL<br>
+    • Low Volume, Low Sales: SIDE SHEET RH COMPLE, FRONT COVER SHEET CO<br><br>
+    
+    <h5>Explanation of Trends and Patterns:</h5>
+    <strong>Sales Distribution:</strong> The company is heavily reliant on a few key customers, which poses a risk if any of these customers reduce their orders. Diversifying party engagement is crucial to mitigate this risk.<br><br>
+    
+    <strong>Production Fluctuations:</strong> The variability in daily production volumes highlights the need for better demand forecasting and inventory management to align production with market demand.<br><br>
+    
+    <strong>Quadrant Analysis:</strong> The categorization of products into quadrants reveals that some high-potential products are underutilized due to inadequate production capacity, while low-performing products consume resources inefficiently. Tailored strategies for each quadrant will help optimize sales and production efficiency.
+    </div>
+    """, unsafe_allow_html=True)
+    
+    st.markdown("<br>", unsafe_allow_html=True)
+    
+    # Strategic Recommendations Section
     col1, col2 = st.columns(2)
     
     with col1:
         st.markdown("""
         <div class="insight-box">
-        <h4>🎯 Key Findings</h4>
+        <h4>🎯 Key Strategic Actions</h4>
         <ul>
-        <li><strong>Customer Concentration Risk:</strong> Top 3 customers account for majority of sales</li>
-        <li><strong>Production Variability:</strong> Significant daily fluctuations indicate demand unpredictability</li>
-        <li><strong>Product Mix:</strong> High-value, low-volume products show strong profitability potential</li>
-        <li><strong>Market Position:</strong> Balanced portfolio across different product categories</li>
+        <li><strong>Customer Risk Mitigation:</strong> Diversify customer base to reduce dependency on top 4 customers</li>
+        <li><strong>Production Planning:</strong> Implement advanced forecasting to stabilize production volumes</li>
+        <li><strong>Resource Optimization:</strong> Focus on high-volume, high-sales products while improving efficiency</li>
+        <li><strong>Market Expansion:</strong> Explore new markets for underutilized high-potential products</li>
         </ul>
         </div>
         """, unsafe_allow_html=True)
@@ -270,12 +302,12 @@ with tab5:
     with col2:
         st.markdown("""
         <div class="insight-box">
-        <h4>💡 Strategic Recommendations</h4>
+        <h4>💡 Operational Improvements</h4>
         <ul>
-        <li><strong>Diversification:</strong> Reduce dependency on top customers</li>
-        <li><strong>Demand Forecasting:</strong> Implement better prediction models</li>
-        <li><strong>Product Focus:</strong> Invest in high-margin, low-volume products</li>
-        <li><strong>Capacity Planning:</strong> Optimize production scheduling</li>
+        <li><strong>Demand Forecasting:</strong> Better prediction models for production alignment</li>
+        <li><strong>Inventory Management:</strong> Optimize stock levels based on demand patterns</li>
+        <li><strong>Product Portfolio:</strong> Rationalize low-performing products in LL quadrant</li>
+        <li><strong>Capacity Planning:</strong> Increase production capacity for high-potential products</li>
         </ul>
         </div>
         """, unsafe_allow_html=True)
